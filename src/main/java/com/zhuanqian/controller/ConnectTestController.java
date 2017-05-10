@@ -3,6 +3,7 @@ package com.zhuanqian.controller;
 import com.zhuanqian.model.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,10 +24,6 @@ public class ConnectTestController {
     @RequestMapping(value = "/test", method = RequestMethod.POST)
     @ResponseBody
     public String helloWord(HttpServletRequest request, @RequestBody JsonObject jsonObject){
-
-        LOGGER.info(jsonObject.getAge());
-        LOGGER.info(jsonObject.getName());
-        LOGGER.info(jsonObject.getPassword());
         return "test";
     }
 }
